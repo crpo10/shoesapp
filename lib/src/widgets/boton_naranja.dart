@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 
 class BotonNaranja extends StatelessWidget {
-  final String texto;
+  final String? texto;
+  final double? alto, ancho;
+  final Color? color;
 
-  BotonNaranja({@required this.texto});
+  BotonNaranja({
+    @required this.texto,
+    this.alto = 50,
+    this.ancho = 150,
+    this.color = Colors.orange,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      width: 150,
-      height: 50,
+      width: this.ancho,
+      height: this.alto,
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: color,
         borderRadius: BorderRadius.circular(100),
       ),
       child: Text(

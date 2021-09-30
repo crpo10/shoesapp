@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomAppbar extends StatelessWidget {
-  final String texto;
+  final String? texto;
 
   CustomAppbar({@required this.texto});
 
@@ -18,7 +18,7 @@ class CustomAppbar extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                this.texto,
+                this.texto!,
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
               ),
               Spacer(),

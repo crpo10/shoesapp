@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoesapp/src/widgets/custom_widgets.dart';
 
 class AgregarCarritoBoton extends StatelessWidget {
-  final double monto;
+  final double? monto;
 
   const AgregarCarritoBoton({this.monto});
 

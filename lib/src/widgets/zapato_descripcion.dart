@@ -1,10 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class ZapatoDescripcion extends StatelessWidget {
-  final String titulo;
-  final String descripcion;
+  final String? titulo;
+  final String? descripcion;
 
   const ZapatoDescripcion({
     @required this.descripcion,
@@ -20,12 +18,12 @@ class ZapatoDescripcion extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           Text(
-            this.titulo,
+            this.titulo!,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
           ),
           SizedBox(height: 20),
           Text(
-            this.descripcion,
+            this.descripcion!,
             style: TextStyle(color: Colors.black54, height: 1.6),
           ),
         ],
