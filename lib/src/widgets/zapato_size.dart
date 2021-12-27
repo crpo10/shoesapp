@@ -22,12 +22,12 @@ class ZapatoSizePreview extends StatelessWidget {
       },
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: (this.fullScreen!) ? 5 : 20,
+          horizontal: (this.fullScreen!) ? 5 : 30,
           vertical: (this.fullScreen!) ? 5 : 0,
         ),
         child: Container(
           width: double.infinity,
-          height: (this.fullScreen!) ? 430 : 450,
+          height: (this.fullScreen!) ? 420 : 440,
           decoration: BoxDecoration(
             color: Color(0xffFFCf53),
             borderRadius: (!this.fullScreen!)
@@ -41,11 +41,7 @@ class ZapatoSizePreview extends StatelessWidget {
           ),
           child: Column(
             children: [
-              // zapato y sombra
               _ZapatoDetalles(),
-
-              // Tallas
-
               if (!this.fullScreen!) _ZapatoTallas(),
             ],
           ),
@@ -127,7 +123,7 @@ class _ZapatoDetalles extends StatelessWidget {
     final controller = Provider.of<ZapatoModel>(context);
 
     return Padding(
-      padding: const EdgeInsets.all(50),
+      padding: EdgeInsets.all(50),
       child: Stack(
         children: [
           Positioned(
@@ -155,7 +151,7 @@ class _ZapatoSombra extends StatelessWidget {
       angle: -0.5,
       child: Container(
         width: 230,
-        height: 100,
+        height: 120,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
           boxShadow: [

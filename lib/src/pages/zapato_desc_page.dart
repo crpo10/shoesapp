@@ -71,7 +71,7 @@ class _BotonesLinkCartSettings extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 30),
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _BotonSombreado(Icon(Icons.star, color: Colors.red, size: 25)),
           _BotonSombreado(Icon(Icons.shopping_cart_outlined,
@@ -111,35 +111,32 @@ class _BotonSombreado extends StatelessWidget {
 }
 
 class _ColorsAndMore extends StatelessWidget {
-  const _ColorsAndMore({
-    Key? key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Row(
         children: [
           Expanded(
-              child: Stack(
-            children: [
-              Positioned(
-                left: 90,
-                child: _ButtonColor(Color(0xffc6d642), 4, 'assets/verde.png'),
-              ),
-              Positioned(
-                left: 60,
-                child:
-                    _ButtonColor(Color(0xffffad29), 3, 'assets/amarillo.png'),
-              ),
-              Positioned(
-                left: 30,
-                child: _ButtonColor(Color(0xff2099f1), 2, 'assets/azul.png'),
-              ),
-              _ButtonColor(Color(0xff364d56), 1, 'assets/negro.png')
-            ],
-          )),
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  left: 90,
+                  child: _ButtonColor(Color(0xffc6d642), 4, 'assets/verde.png'),
+                ),
+                Positioned(
+                  left: 60,
+                  child:
+                      _ButtonColor(Color(0xffffad29), 3, 'assets/amarillo.png'),
+                ),
+                Positioned(
+                  left: 30,
+                  child: _ButtonColor(Color(0xff2099f1), 2, 'assets/azul.png'),
+                ),
+                _ButtonColor(Color(0xff364d56), 1, 'assets/negro.png')
+              ],
+            ),
+          ),
           BotonNaranja(
             texto: 'More releate items',
             alto: 30,
